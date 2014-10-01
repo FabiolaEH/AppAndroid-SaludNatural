@@ -102,21 +102,8 @@ public class AppointmentsScreen extends Activity implements OnItemSelectedListen
 	
 	public void buttonProcessAppointmen(View view)
 	{
-		//send mail
-		Intent i = new Intent(Intent.ACTION_SEND);
-		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"fabi9414@hotmail.com"});
-		i.putExtra(Intent.EXTRA_SUBJECT, "Notificación de Cita");
-		i.putExtra(Intent.EXTRA_TEXT   , "Le recordamos que tiene programada una cita en la " +
-										 "macrobiótica Salud Natural");
-		try 
-		{
-		    startActivity(Intent.createChooser(i, "Send mail..."));
-		}
-		
-		catch (android.content.ActivityNotFoundException ex) 
-		{
-		    Toast.makeText(AppointmentsScreen.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-		}
+		Intent intent = new Intent(this,MainMenu.class); 
+		//start the second Activity
+		this.startActivity(intent);
 	}
 }

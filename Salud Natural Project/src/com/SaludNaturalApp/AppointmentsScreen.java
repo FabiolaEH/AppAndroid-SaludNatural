@@ -3,6 +3,7 @@ package com.SaludNaturalApp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Toast;
+import com.SaludNaturalBusinessLogic.Mail;
 
 public class AppointmentsScreen extends Activity implements OnItemSelectedListener{
 
@@ -100,23 +102,47 @@ public class AppointmentsScreen extends Activity implements OnItemSelectedListen
 		
 	}	
 	
-	public void buttonProcessAppointmen(View view)
+	public void buttonProcessAppointmen(View view) 
 	{
+		
 		//send mail
-		Intent i = new Intent(Intent.ACTION_SEND);
-		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"fabi9414@hotmail.com"});
-		i.putExtra(Intent.EXTRA_SUBJECT, "Notificación de Cita");
-		i.putExtra(Intent.EXTRA_TEXT   , "Le recordamos que tiene programada una cita en la " +
-										 "macrobiótica Salud Natural");
-		try 
-		{
-		    startActivity(Intent.createChooser(i, "Send mail..."));
+		try{
+			sendEmail("fabiolaeh9414@gmail.com", "fabiolaeh9414@gmail.com", "subject", "mensaje", null);
 		}
 		
-		catch (android.content.ActivityNotFoundException ex) 
+		catch(Exception e)
 		{
-		    Toast.makeText(AppointmentsScreen.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+			
 		}
+		 
+	}
+	
+	
+	public static boolean sendEmail(String to, String from, String subject, String message,
+									String[] attachements) throws Exception 
+    {     
+		Mail mail = new Mail();
+		if (subject != null && subject.length() > 0) {
+		mail.setSubject(subject);
+		} else {
+		mail.setSubject("Subject");
+		}
+		
+		if (message != null && message.length() > 0) {
+		mail.setBody(message);
+		} else {
+		mail.setBody("Message");
+		}
+		
+		mail.setTo(new String[] {to});
+		
+		if (attachements != null) 
+		{
+			for (String attachement : attachements) 
+			{       
+				mail.addAttachment(attachement);
+			}
+		}
+		return mail.send();
 	}
 }

@@ -7,4 +7,7 @@
 <fullyQualifiedTypeName name="android.widget.Spinner"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="com.SaludNaturalApp.SymptomsConsult"/>
+<fullyQualifiedTypeName name="com.facebook.android.R.color"/>
+<fullyQualifiedTypeName name="com.SaludNaturalBusinessLogic.Mail"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
 </qualifiedTypeNameHistroy>

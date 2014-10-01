@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/symptomsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="14dp"
+        android:text="Consultar Síntomas"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0099cc"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/symptomsList"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="80dp" >
+    </ListView>
+    
+    <Button
+        android:id="@+id/buttonConsult"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_centerHorizontal="true"
+        android:text="Consultar" />
+
+    <TextView
+        android:id="@+id/labelProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/symptomsList"
+        android:layout_marginTop="22dp"
+        android:text="Productos recomentados:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#6a6565" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/labelProducts"
+        android:background="#6a6565" >
+
+    </ListView>
+
+</RelativeLayout>

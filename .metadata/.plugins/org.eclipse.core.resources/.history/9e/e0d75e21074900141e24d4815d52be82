@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+    <TextView
+        android:id="@+id/appointmentsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="14dp"
+        android:text="Programar Cita"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#0099cc"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/labelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/appointmentsTitle"
+        android:layout_below="@+id/appointmentsTitle"
+        android:layout_marginTop="36dp"
+        android:text="Nombre"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#6a6565" />
+
+    <EditText
+        android:id="@+id/txtboxName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelName"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/labelName"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelName"
+        android:layout_below="@+id/labelName"
+        android:layout_marginTop="41dp"
+        android:text="Email"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#6a6565" />
+
+    <EditText
+        android:id="@+id/txtboxEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelEmail"
+        android:layout_alignLeft="@+id/txtboxName"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/labelLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelEmail"
+        android:layout_below="@+id/labelEmail"
+        android:layout_marginTop="50dp"
+        android:text="Sede"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#6a6565" />
+
+    <Spinner
+        android:id="@+id/spinnerLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelLocation"
+        android:layout_alignLeft="@+id/txtboxEmail" />
+
+    <TextView
+        android:id="@+id/labelNumbAppoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelLocation"
+        android:layout_below="@+id/labelLocation"
+        android:layout_marginTop="42dp"
+        android:text="Cant. Citas"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#6a6565" />
+
+    <Spinner
+        android:id="@+id/spinnerNumbAppoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerLocations"
+        android:layout_below="@+id/spinnerLocations" />
+    
+</RelativeLayout>

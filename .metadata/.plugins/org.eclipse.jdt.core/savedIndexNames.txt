@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+C:\Users\Fabiola\Documents\AppAndroid-SaludNatural\.metadata\.plugins\org.eclipse.jdt.core
+264544775.index
+3065416851.index
+821579218.index
+3134071060.index
+1205420220.index
+3112430778.index
+1284074322.index
